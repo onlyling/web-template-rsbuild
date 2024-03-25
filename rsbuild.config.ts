@@ -26,6 +26,10 @@ export default defineConfig({
       'process.env': JSON.stringify(process.env),
     },
   },
+  output: {
+    // TODO 结合自身需求设置静态资源路径
+    // assetPrefix: './',
+  },
   server: {
     proxy: {
       [`${REACT_APP_BASE_URL}`]: REACT_APP_API_HOST,

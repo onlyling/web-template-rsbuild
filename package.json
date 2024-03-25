@@ -8,6 +8,7 @@
     "start:demo": "cross-env BUILD_ENV=demo rsbuild dev",
     "start:prod": "cross-env BUILD_ENV=prod rsbuild dev",
     "build": "rsbuild build",
+    "build:prod": "cross-env BUILD_ENV=prod rsbuild build",
     "lint:ts": "tsc --noEmit && eslint src --ext .ts,.tsx",
     "lint:style": "stylelint 'src/**/*.less'",
     "ncu": "npx npm-check-updates -u -x react-router-dom",

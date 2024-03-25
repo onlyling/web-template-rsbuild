@@ -11,6 +11,7 @@ import './index.css'
 dayjsLocale('zh-cn')
 
 const App = () => {
+  // TODO 结合自身需求选择路由模式
   return (
     <ConfigProvider locale={zhCN}>
       <AntdApp>
