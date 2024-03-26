@@ -4,3 +4,5 @@ export {
   useSetLayoutContentClassName,
   useLayoutContentFlex,
 } from './layout-content-class-name-content'
+
+export type { CustomRouteObject } from './types'

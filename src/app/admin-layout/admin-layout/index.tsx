@@ -1,10 +1,14 @@
 import { HomeOutlined } from '@ant-design/icons'
 import { Menu } from 'antd'
-import { memo, useCallback } from 'react'
+import isNil from 'lodash/isNil'
+import { memo, useCallback, useMemo } from 'react'
 import { useOutlet, Link } from 'react-router-dom'
 
+import { useMatchCurrentRoutes } from '@/app/router-context'
 import useInitializing from '@/app/useInitializing'
+import ResultError from '@/components/result-error'
 import config from '@/config'
+import useAccess from '@/stores/access'
 
 import {
   AdminLayoutBody,
@@ -19,12 +23,26 @@ import {
 } from '../layout-content-class-name-content'
 import { MenuContentProvider, useMenuContent } from '../menu-content'
 import AdminLayoutSkeleton from '../skeleton'
+import type { CustomRouteObject } from '../types'
 import AdminLayoutUserInfo from '../user-info'
 import './style.less'
 
 const AdminLayout: React.FC<React.PropsWithChildren> = () => {
   const outlet = useOutlet()
   const initializing = useInitializing()
+  const currentMatchRoutes = useMatchCurrentRoutes()
+  const authorization = useMemo(() => {
+    if (currentMatchRoutes.length) {
+      const route = currentMatchRoutes[currentMatchRoutes.length - 1]
+        .route as CustomRouteObject
+
+      if (!isNil(route.access)) {
+        return useAccess.getState().hasAccess(route.access)
+      }
+    }
+
+    return true
+  }, [currentMatchRoutes])
   const { selectedKeys, openKeys, setMenuSelect } = useMenuContent()
   const { className: layoutContentClassName } =
     useLayoutContentClassNameContent()
@@ -91,7 +109,11 @@ const AdminLayout: React.FC<React.PropsWithChildren> = () => {
           />
         </AdminLayoutSider>
         <AdminLayoutContent className={layoutContentClassName}>
-          {outlet}
+          {authorization ? (
+            outlet
+          ) : (
+            <ResultError status="403" homePathName={config.routerAdminPath} />
+          )}
         </AdminLayoutContent>
       </AdminLayoutBody>
     </AdminLayoutPage>

@@ -1,12 +1,11 @@
-import type { RouteObject } from 'react-router-dom'
-
+import type { CustomRouteObject } from '@/app/admin-layout'
 import BlankLayout from '@/layouts/blank-layout'
 
 import UserDetail from './detail'
 import UserList from './list'
 import { USER_LIST, USER_DETAIL } from './path'
 
-const routes: RouteObject[] = [
+const routes: CustomRouteObject[] = [
   {
     path: USER_LIST,
     element: <BlankLayout />,
@@ -18,6 +17,7 @@ const routes: RouteObject[] = [
       {
         path: `${USER_DETAIL}/:id`,
         element: <UserDetail />,
+        access: ['user_detail'],
       },
     ],
   },

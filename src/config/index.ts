@@ -1,5 +1,5 @@
 const routerBasePath = '/'
-const routerAdminPath = `${routerBasePath}admin/`
+const routerAdminPath = `${routerBasePath}admin`
 
 const { REACT_APP_BASE_URL, REACT_APP_API_HOST } = process.env
 

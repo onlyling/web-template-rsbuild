@@ -2,10 +2,10 @@ import { useMemoizedFn } from 'ahooks'
 import { useEffect, useState } from 'react'
 
 import useNavigateToLogin from '@/app/useNavigateToLogin'
-import type { User } from '@/stores/user'
+import useAccess from '@/stores/access'
 import useUser from '@/stores/user'
 
-const useInitializing = (callback?: (info: User) => void) => {
+const useInitializing = (callback?: () => void) => {
   const [initializing, setInitializing] = useState(true)
   const navigateToLogin = useNavigateToLogin()
   const callbackMemo = useMemoizedFn(callback || (() => {}))
@@ -14,6 +14,9 @@ const useInitializing = (callback?: (info: User) => void) => {
     const { fetchUser } = useUser.getState()
 
     fetchUser()
+      .then(() => {
+        return useAccess.getState().updateAccess()
+      })
       .then(callbackMemo)
       .catch(navigateToLogin)
       .finally(() => {
