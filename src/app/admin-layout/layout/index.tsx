@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import React from 'react'
 
-import './style.layout.less'
+import './style.less'
 
 export const AdminLayoutPage: React.FC<
   React.HTMLAttributes<HTMLDivElement>

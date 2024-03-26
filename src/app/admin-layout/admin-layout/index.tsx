@@ -12,15 +12,15 @@ import {
   AdminLayoutHeader,
   AdminLayoutPage,
   AdminLayoutSider,
-} from './layout'
+} from '../layout'
 import {
   LayoutContentClassNameContentProvider,
   useLayoutContentClassNameContent,
-} from './layout-content-class-name-content'
-import { MenuContentProvider, useMenuContent } from './menu-content'
-import AdminLayoutSkeleton from './skeleton'
-import AdminLayoutUserInfo from './user-info'
-import './style.admin-layout.less'
+} from '../layout-content-class-name-content'
+import { MenuContentProvider, useMenuContent } from '../menu-content'
+import AdminLayoutSkeleton from '../skeleton'
+import AdminLayoutUserInfo from '../user-info'
+import './style.less'
 
 const AdminLayout: React.FC<React.PropsWithChildren> = () => {
   const outlet = useOutlet()

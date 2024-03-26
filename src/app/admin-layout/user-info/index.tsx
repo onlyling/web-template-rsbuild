@@ -5,7 +5,7 @@ import { memo } from 'react'
 import useLogout from '@/app/useLogout'
 import useUser from '@/stores/user'
 
-import './style.user-info.less'
+import './style.less'
 
 const AdminLayoutUserInfo = () => {
   const { user } = useUser()
