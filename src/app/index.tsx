@@ -1,7 +1,7 @@
 import { ConfigProvider, App as AntdApp } from 'antd'
 import zhCN from 'antd/locale/zh_CN'
 import { locale as dayjsLocale } from 'dayjs'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, HashRouter } from 'react-router-dom'
 
 import AppRouter from './app-router'
 
@@ -10,14 +10,17 @@ import './index.css'
 
 dayjsLocale('zh-cn')
 
+const { REACT_ROUTER_MODE } = process.env
+const Router = REACT_ROUTER_MODE === 'gh-pages' ? HashRouter : BrowserRouter
+
 const App = () => {
   // TODO 结合自身需求选择路由模式
   return (
     <ConfigProvider locale={zhCN}>
       <AntdApp>
-        <BrowserRouter>
+        <Router>
           <AppRouter />
-        </BrowserRouter>
+        </Router>
       </AntdApp>
     </ConfigProvider>
   )

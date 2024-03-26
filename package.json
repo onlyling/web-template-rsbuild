@@ -9,6 +9,7 @@
     "start:prod": "cross-env BUILD_ENV=prod rsbuild dev",
     "build": "rsbuild build",
     "build:prod": "cross-env BUILD_ENV=prod rsbuild build",
+    "build:gh-pages": "cross-env BUILD_ENV=gh-pages rsbuild build",
     "lint:ts": "tsc --noEmit && eslint src --ext .ts,.tsx",
     "lint:style": "stylelint 'src/**/*.less'",
     "ncu": "npx npm-check-updates -u -x react-router-dom",
