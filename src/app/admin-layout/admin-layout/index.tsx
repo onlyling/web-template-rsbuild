@@ -6,6 +6,7 @@ import { useOutlet, Link } from 'react-router-dom'
 
 import { useMatchCurrentRoutes } from '@/app/router-context'
 import useInitializing from '@/app/useInitializing'
+import ErrorBoundary from '@/components/error-boundary'
 import ResultError from '@/components/result-error'
 import config from '@/config'
 import useAccess from '@/stores/access'
@@ -108,13 +109,15 @@ const AdminLayout: React.FC<React.PropsWithChildren> = () => {
             })}
           />
         </AdminLayoutSider>
-        <AdminLayoutContent className={layoutContentClassName}>
-          {authorization ? (
-            outlet
-          ) : (
-            <ResultError status="403" homePathName={config.routerAdminPath} />
-          )}
-        </AdminLayoutContent>
+        <ErrorBoundary>
+          <AdminLayoutContent className={layoutContentClassName}>
+            {authorization ? (
+              outlet
+            ) : (
+              <ResultError status="403" homePathName={config.routerAdminPath} />
+            )}
+          </AdminLayoutContent>
+        </ErrorBoundary>
       </AdminLayoutBody>
     </AdminLayoutPage>
   )

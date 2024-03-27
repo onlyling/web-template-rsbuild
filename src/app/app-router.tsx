@@ -1,5 +1,6 @@
 import type { RouteObject } from 'react-router-dom'
 
+import ErrorBoundary from '@/components/error-boundary'
 import ResultError from '@/components/result-error'
 import config from '@/config'
 import PageHome from '@/pages/home'
@@ -50,7 +51,11 @@ const routes: RouteObject[] = [
 ]
 
 const AppRouter = () => {
-  return <RouterContextProvider routes={routes} />
+  return (
+    <ErrorBoundary>
+      <RouterContextProvider routes={routes} />
+    </ErrorBoundary>
+  )
 }
 
 export default AppRouter
