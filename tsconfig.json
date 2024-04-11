@@ -20,7 +20,7 @@
       "@/*": ["src/*"]
     },
     "noImplicitAny": false,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "noUnusedLocals": false
   },
   "include": [

@@ -1,7 +1,5 @@
-import { HomeOutlined } from '@ant-design/icons'
-import { Menu } from 'antd'
 import isNil from 'lodash/isNil'
-import { memo, useCallback, useMemo } from 'react'
+import { memo, useMemo } from 'react'
 import { useOutlet, Link } from 'react-router-dom'
 
 import { useMatchCurrentRoutes } from '@/app/router-context'
@@ -22,13 +20,18 @@ import {
   LayoutContentClassNameContentProvider,
   useLayoutContentClassNameContent,
 } from '../layout-content-class-name-content'
-import { MenuContentProvider, useMenuContent } from '../menu-content'
+import AdminMenu from '../menu'
+import { MenuContentProvider } from '../menu-content'
 import AdminLayoutSkeleton from '../skeleton'
-import type { CustomRouteObject } from '../types'
+import type { CustomRouteObject, CustomMenu } from '../types'
 import AdminLayoutUserInfo from '../user-info'
 import './style.less'
 
-const AdminLayout: React.FC<React.PropsWithChildren> = () => {
+interface AdminLayoutProps {
+  menu: CustomMenu[]
+}
+
+const AdminLayout: React.FC<AdminLayoutProps> = ({ menu }) => {
   const outlet = useOutlet()
   const initializing = useInitializing()
   const currentMatchRoutes = useMatchCurrentRoutes()
@@ -44,28 +47,8 @@ const AdminLayout: React.FC<React.PropsWithChildren> = () => {
 
     return true
   }, [currentMatchRoutes])
-  const { selectedKeys, openKeys, setMenuSelect } = useMenuContent()
   const { className: layoutContentClassName } =
     useLayoutContentClassNameContent()
-
-  const onSelect = useCallback(
-    (e: { selectedKeys: string[] }) => {
-      setMenuSelect(s => ({
-        ...s,
-        selectedKeys: e.selectedKeys,
-      }))
-    },
-    [setMenuSelect],
-  )
-  const onOpenChange = useCallback(
-    (e: string[]) => {
-      setMenuSelect(s => ({
-        ...s,
-        openKeys: e,
-      }))
-    },
-    [setMenuSelect],
-  )
 
   if (initializing) {
     return <AdminLayoutSkeleton />
@@ -84,30 +67,7 @@ const AdminLayout: React.FC<React.PropsWithChildren> = () => {
 
       <AdminLayoutBody>
         <AdminLayoutSider>
-          <Menu
-            selectedKeys={selectedKeys}
-            openKeys={openKeys}
-            onSelect={onSelect}
-            onOpenChange={onOpenChange}
-            className="admin-layout_sider-menu"
-            mode="inline"
-            items={new Array(5).fill(0).map((_, index) => {
-              return {
-                key: `main_${index}`,
-                icon: <HomeOutlined />,
-                label: `主要菜单_${index}`,
-                children:
-                  index === 0
-                    ? undefined
-                    : new Array(4).fill(0).map((__, subIndex) => {
-                        return {
-                          key: `sub_${index}_${subIndex}`,
-                          label: `次要菜单_${index}_${subIndex}`,
-                        }
-                      }),
-              }
-            })}
-          />
+          <AdminMenu menu={menu} />
         </AdminLayoutSider>
         <ErrorBoundary>
           <AdminLayoutContent className={layoutContentClassName}>
@@ -123,11 +83,11 @@ const AdminLayout: React.FC<React.PropsWithChildren> = () => {
   )
 }
 
-const AdminLayoutWrapper = () => {
+const AdminLayoutWrapper: React.FC<AdminLayoutProps> = props => {
   return (
     <LayoutContentClassNameContentProvider>
       <MenuContentProvider>
-        <AdminLayout />
+        <AdminLayout {...props} />
       </MenuContentProvider>
     </LayoutContentClassNameContentProvider>
   )

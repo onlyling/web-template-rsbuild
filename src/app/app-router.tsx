@@ -8,6 +8,7 @@ import PageLogin, { PATH_NAME_LOGIN } from '@/pages/other/login'
 
 import { AdminLayout } from './admin-layout'
 import AppInitializing from './app-initializing'
+import appMenu from './app-menu'
 import { RouterContextProvider } from './router-context'
 
 const pageRoutes = require.context('../pages', false, /router\.tsx$/)
@@ -29,7 +30,7 @@ const routes: RouteObject[] = [
   },
   {
     path: config.routerAdminPath,
-    element: <AdminLayout />,
+    element: <AdminLayout menu={appMenu} />,
     children: [
       {
         index: true,

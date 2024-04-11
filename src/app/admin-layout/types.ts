@@ -7,3 +7,14 @@ export interface CustomRouteObject extends Omit<RouteObject, 'children'> {
   access?: string[]
   children?: CustomRouteObject[]
 }
+
+export interface CustomMenu {
+  /**
+   * 菜单权限，如果是 undefined 表示不限制
+   */
+  access?: string[]
+  icon?: React.ReactElement
+  title: string
+  path?: string
+  children?: CustomMenu[]
+}

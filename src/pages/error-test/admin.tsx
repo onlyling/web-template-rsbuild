@@ -13,7 +13,7 @@ const ErrorTestAdmin = () => {
   return (
     <>
       <p>ErrorTestAdmin</p>
-      {randomData.text}
+      {randomData!.text}
     </>
   )
 }

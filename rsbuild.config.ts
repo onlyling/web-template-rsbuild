@@ -12,7 +12,7 @@ const HTML_PLACEHOLDER = fs.readFileSync('src/placeholder.html')
 const { REACT_APP_BASE_URL, REACT_APP_API_HOST, REACT_ROUTER_MODE } =
   dotenvConfig({
     path: path.join(__dirname, `/.env.${BUILD_ENV}`),
-  }).parsed
+  }).parsed || {}
 
 export default defineConfig({
   source: {
