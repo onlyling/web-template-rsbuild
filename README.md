@@ -18,6 +18,8 @@ pnpm run build:dev
 
 新增或修改 `.env.xxx` 文件，在 `scripts` 中指定 `cross-env BUILD_ENV=xxx` 变量。
 
+`src/config/index.ts` 文件使用到变量。
+
 ## 菜单、路由
 
 当前方案菜单、路由分离，各自配置。
