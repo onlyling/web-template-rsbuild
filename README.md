@@ -28,6 +28,6 @@ pnpm run build:dev
 
 路由配置参考 `src/pages/user/router.tsx` 文件，在 React Router 上扩展权限字段，`src/app/app-router.tsx` 文件收集 `pages` 下 `.router.tsx` 文件，组合成管理后台路由数组。
 
-## 权限
+## 用户权限
 
 `src/stores/access.ts` 文件维护当前用户权限，在初始化应用(`src/app/app-initializing.tsx`)的时候发起用户信息、用户权限更新，登录后跳转到 `/admin` 路由(`src/app/admin-layout/admin-layout/index.tsx`)也会有同样的更新。

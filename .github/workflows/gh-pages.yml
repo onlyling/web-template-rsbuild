@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - README.md
+      - '**/README.md'
 jobs:
   build:
     name: Build and deploy gh-pages
