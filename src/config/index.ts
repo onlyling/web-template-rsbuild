@@ -1,3 +1,5 @@
+import IMG_LOGO from '@/../public/192x192.png'
+
 const routerBasePath = '/'
 const routerAdminPath = `${routerBasePath}admin`
 
@@ -12,7 +14,7 @@ const config = {
   routerBasePath,
   routerAdminPath,
   name: '春分数据服务平台',
-  logo: 'http://dummyimage.com/100x100/009988/ffffff',
+  logo: IMG_LOGO,
 }
 
 export default config

@@ -1,4 +1,8 @@
-import { ExclamationCircleOutlined, UpOutlined } from '@ant-design/icons'
+import {
+  ExclamationCircleOutlined,
+  UpOutlined,
+  UserOutlined,
+} from '@ant-design/icons'
 import { Dropdown, Modal } from 'antd'
 import { memo } from 'react'
 
@@ -42,7 +46,9 @@ const AdminLayoutUserInfo = () => {
         },
       }}>
       <div className="admin-layout-user-info">
-        <div className="admin-layout-user-info_avatar" />
+        <div className="admin-layout-user-info_avatar">
+          <UserOutlined />
+        </div>
         <div className="admin-layout-user-info_name">
           {user.name} <UpOutlined />
         </div>

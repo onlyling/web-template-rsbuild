@@ -40,7 +40,7 @@ export default defineConfig({
   plugins: [pluginReact()],
   html: {
     template: path.relative(__dirname, 'src/index.html'),
-    favicon: path.relative(__dirname, 'public/favicon_qgl.ico'),
+    favicon: path.relative(__dirname, 'public/favicon.ico'),
     title: APP_NAME,
     templateParameters: {
       description: 'web template by rsbuild',
