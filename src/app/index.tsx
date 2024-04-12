@@ -13,10 +13,12 @@ dayjsLocale('zh-cn')
 const { REACT_ROUTER_MODE } = process.env
 const Router = REACT_ROUTER_MODE === 'gh-pages' ? HashRouter : BrowserRouter
 
+const theme = { cssVar: true }
+
 const App = () => {
   // TODO 结合自身需求选择路由模式
   return (
-    <ConfigProvider locale={zhCN}>
+    <ConfigProvider locale={zhCN} theme={theme}>
       <AntdApp>
         <Router>
           <AppRouter />
