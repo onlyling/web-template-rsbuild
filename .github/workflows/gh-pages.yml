@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - README.md
 jobs:
   build:
     name: Build and deploy gh-pages

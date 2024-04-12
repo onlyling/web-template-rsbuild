@@ -26,7 +26,7 @@ pnpm run build:dev
 
 菜单配置参考 `src/app/app-menu.tsx` 文件，支持子菜单、菜单图标、菜单权限。
 
-路由配置参考 `src/pages/user/router.tsx` 文件，在 React Router 上扩展权限字段，`src/app/app-router.tsx` 文件组合个 `pages` 下的路由对象。
+路由配置参考 `src/pages/user/router.tsx` 文件，在 React Router 上扩展权限字段，`src/app/app-router.tsx` 文件收集 `pages` 下 `.router.tsx` 文件，组合成管理后台路由数组。
 
 ## 权限
 
