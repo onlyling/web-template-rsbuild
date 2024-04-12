@@ -44,7 +44,7 @@ const useUser = create(
         }
         const mockUser: User = {
           id: '_',
-          name: 'mock user name',
+          name: '模拟用户_xyz',
         }
 
         set({
