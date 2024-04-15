@@ -2,6 +2,8 @@ import { Result, Button } from 'antd'
 import type { ErrorInfo } from 'react'
 import React, { PureComponent } from 'react'
 
+import ErrorBoundaryWrapper from './wrapper'
+
 export interface ErrorBoundaryProps {
   /**
    * 错误提示
@@ -75,26 +77,28 @@ class ErrorBoundary extends PureComponent<
       }
 
       return (
-        <div
-          style={{
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            flex: 1,
-            overflow: 'hidden',
-          }}>
-          <Result
-            status="warning"
-            title={this.props.title || '加载失败，请稍后再试~'}
-            subTitle={`${this.state.error.name}\n${this.state.error.message}`}
-            extra={
-              <Button type="primary" onClick={this.onClickReload}>
-                {this.props.reloadText || '重新加载'}
-              </Button>
-            }
-          />
-        </div>
+        <ErrorBoundaryWrapper onChangePathname={this.onClickReload}>
+          <div
+            style={{
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flex: 1,
+              overflow: 'hidden',
+            }}>
+            <Result
+              status="warning"
+              title={this.props.title || '加载失败，请稍后再试~'}
+              subTitle={`${this.state.error.name}\n${this.state.error.message}`}
+              extra={
+                <Button type="primary" onClick={this.onClickReload}>
+                  {this.props.reloadText || '重新加载'}
+                </Button>
+              }
+            />
+          </div>
+        </ErrorBoundaryWrapper>
       )
     }
 
