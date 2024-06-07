@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import { defineConfig } from '@rsbuild/core'
+import { pluginLess } from '@rsbuild/plugin-less'
 import { pluginReact } from '@rsbuild/plugin-react'
 import { config as dotenvConfig } from 'dotenv'
 
@@ -37,7 +38,7 @@ export default defineConfig({
       [`${REACT_APP_BASE_URL}`]: REACT_APP_API_HOST,
     },
   },
-  plugins: [pluginReact()],
+  plugins: [pluginReact(), pluginLess()],
   html: {
     template: path.relative(__dirname, 'src/index.html'),
     favicon: path.relative(__dirname, 'public/favicon.ico'),
