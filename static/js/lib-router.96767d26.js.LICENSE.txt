@@ -1,7 +1,3 @@
-/*! react-router */
-
-/*! @babel/runtime/helpers/esm/extends */
-
 /**
  * React Router DOM v6.3.0
  *
@@ -23,11 +19,3 @@
  *
  * @license MIT
  */
-
-/*! react */
-
-/*! react */
-
-/*! history */
-
-/*! history */
