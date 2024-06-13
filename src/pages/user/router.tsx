@@ -1,8 +1,9 @@
+import { lazy } from 'react'
+
+import { buildRouterSuspense } from '@/app/admin-layout'
 import type { CustomRouteObject } from '@/app/admin-layout'
 import BlankLayout from '@/layouts/blank-layout'
 
-import UserDetail from './detail'
-import UserList from './list'
 import { USER_LIST, USER_DETAIL } from './path'
 
 const routes: CustomRouteObject[] = [
@@ -12,11 +13,11 @@ const routes: CustomRouteObject[] = [
     children: [
       {
         index: true,
-        element: <UserList />,
+        element: buildRouterSuspense(lazy(() => import('./list'))),
       },
       {
         path: `${USER_DETAIL}/:id`,
-        element: <UserDetail />,
+        element: buildRouterSuspense(lazy(() => import('./detail'))),
         access: ['user_detail'],
       },
     ],

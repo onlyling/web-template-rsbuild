@@ -6,3 +6,5 @@ export {
 } from './layout-content-class-name-content'
 
 export type { CustomRouteObject, CustomMenu } from './types'
+
+export { buildRouterSuspense } from './router-suspense'
