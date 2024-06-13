@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb_template_rsbuild=self.webpackChunkweb_template_rsbuild||[]).push([["916"],{10378:function(e,t,r){r.r(t);var l=r(52676),s=r(75271);t.default=()=>{let e=(0,s.useMemo)(()=>Math.random()>.5?{text:"\u663E\u793A\u4E86\u5185\u5BB9"}:null,[]);return(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)("p",{children:"ErrorTestAdmin"}),e.text]})}}}]);
