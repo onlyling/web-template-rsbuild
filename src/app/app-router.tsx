@@ -11,12 +11,15 @@ import AppInitializing from './app-initializing'
 import appMenu from './app-menu'
 import { RouterContextProvider } from './router-context'
 
-const pageRoutes = require.context('../pages', false, /router\.tsx$/)
-let autoRoutes: RouteObject[] = []
+const pageRoutes = import.meta.webpackContext('../pages', {
+  recursive: true,
+  regExp: /router\.tsx$/,
+})
+const autoRoutes: RouteObject[] = []
 
 pageRoutes.keys().forEach(key => {
   const router = pageRoutes(key).default
-  autoRoutes = [...autoRoutes, ...router]
+  autoRoutes.push(...router)
 })
 
 const routes: RouteObject[] = [
