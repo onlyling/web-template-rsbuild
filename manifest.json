@@ -1,0 +1,49 @@
+{
+  "allFiles": [
+    "/web-template-rsbuild/static/js/async/916.0e6a5cfd.js",
+    "/web-template-rsbuild/static/js/async/608.8086e361.js",
+    "/web-template-rsbuild/static/js/async/13.30c245f2.js",
+    "/web-template-rsbuild/static/js/lib-react.53cae98c.js",
+    "/web-template-rsbuild/static/js/lib-router.1fbbc13d.js",
+    "/web-template-rsbuild/static/js/412.bee0d237.js",
+    "/web-template-rsbuild/static/css/index.2577aa76.css",
+    "/web-template-rsbuild/static/js/index.84434ebd.js",
+    "/web-template-rsbuild/static/js/412.bee0d237.js.LICENSE.txt",
+    "/web-template-rsbuild/favicon.ico",
+    "/web-template-rsbuild/static/image/192x192.e94557c2.png",
+    "/web-template-rsbuild/index.html",
+    "/web-template-rsbuild/static/js/lib-react.53cae98c.js.LICENSE.txt",
+    "/web-template-rsbuild/static/js/lib-router.1fbbc13d.js.LICENSE.txt"
+  ],
+  "entries": {
+    "index": {
+      "assets": [
+        "static/image/192x192.e94557c2.png",
+        "/web-template-rsbuild/static/js/412.bee0d237.js.LICENSE.txt",
+        "/web-template-rsbuild/static/js/lib-router.1fbbc13d.js.LICENSE.txt",
+        "/web-template-rsbuild/static/js/lib-react.53cae98c.js.LICENSE.txt"
+      ],
+      "html": [
+        "/web-template-rsbuild/index.html"
+      ],
+      "initial": {
+        "js": [
+          "/web-template-rsbuild/static/js/index.84434ebd.js",
+          "/web-template-rsbuild/static/js/412.bee0d237.js",
+          "/web-template-rsbuild/static/js/lib-router.1fbbc13d.js",
+          "/web-template-rsbuild/static/js/lib-react.53cae98c.js"
+        ],
+        "css": [
+          "/web-template-rsbuild/static/css/index.2577aa76.css"
+        ]
+      },
+      "async": {
+        "js": [
+          "/web-template-rsbuild/static/js/async/13.30c245f2.js",
+          "/web-template-rsbuild/static/js/async/608.8086e361.js",
+          "/web-template-rsbuild/static/js/async/916.0e6a5cfd.js"
+        ]
+      }
+    }
+  }
+}
