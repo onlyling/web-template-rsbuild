@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import { defineConfig } from '@rsbuild/core'
-// import { pluginLess } from '@rsbuild/plugin-less'
+import { pluginLess } from '@rsbuild/plugin-less'
 import { pluginReact } from '@rsbuild/plugin-react'
 import { config as dotenvConfig } from 'dotenv'
 
@@ -14,6 +14,7 @@ const { REACT_APP_BASE_URL, REACT_APP_API_HOST, REACT_ROUTER_MODE } =
   dotenvConfig({
     path: path.join(__dirname, `/.env.${BUILD_ENV}`),
   }).parsed || {}
+const isProduction = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
   dev: {
@@ -35,15 +36,17 @@ export default defineConfig({
     // TODO 结合自身需求设置静态资源路径
     assetPrefix:
       REACT_ROUTER_MODE === 'gh-pages' ? '/web-template-rsbuild' : '/',
-    // https://rsbuild.dev/zh/config/output/manifest
-    // manifest: true,
+    manifest: true,
+    sourceMap: {
+      css: !isProduction,
+    },
   },
   server: {
     proxy: {
       [`${REACT_APP_BASE_URL}`]: REACT_APP_API_HOST,
     },
   },
-  plugins: [pluginReact()],
+  plugins: [pluginReact(), pluginLess()],
   html: {
     template: path.relative(__dirname, 'src/index.html'),
     favicon: path.relative(__dirname, 'public/favicon.ico'),
