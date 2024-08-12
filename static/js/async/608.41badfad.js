@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkweb_template_rsbuild=self.webpackChunkweb_template_rsbuild||[]).push([["608"],{83278:function(e,s,t){t.r(s);var l=t(52676),r=t(83456),i=t(90450);s.default=()=>(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)("div",{children:"1"}),(0,l.jsx)(r.rU,{to:`${i.T}/123`,children:"to user detail"})]})}}]);

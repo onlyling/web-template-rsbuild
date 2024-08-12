@@ -1,0 +1,1 @@
+(self.webpackChunkweb_template_rsbuild=self.webpackChunkweb_template_rsbuild||[]).push([["524"],{59250:function(e,t,n){"use strict";n.r(t),n.d(t,{default:function(){return l}});var r=n("52393"),s=n("60597"),i=n("17312"),l=()=>(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)("div",{children:"1"}),(0,r.jsx)(s.Link,{to:`${i.USER_DETAIL}/123`,children:"to user detail"})]})}}]);

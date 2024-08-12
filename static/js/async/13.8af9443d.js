@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkweb_template_rsbuild=self.webpackChunkweb_template_rsbuild||[]).push([["13"],{46903:function(e,s,t){t.r(s);var u=t(52676),i=t(5791);s.default=()=>{let e=(0,i.UO)();return(0,u.jsxs)("div",{children:["user id is ",e.id]})}}}]);
