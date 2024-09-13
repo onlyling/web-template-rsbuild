@@ -6,8 +6,8 @@
     "/web-template-rsbuild/static/js/lib-react.53cae98c.js",
     "/web-template-rsbuild/static/js/lib-router.7c7e84bc.js",
     "/web-template-rsbuild/static/js/774.5d38e7e3.js",
-    "/web-template-rsbuild/static/css/index.d4a2f7cc.css",
-    "/web-template-rsbuild/static/js/index.b8131c50.js",
+    "/web-template-rsbuild/static/css/index.e6bdfb26.css",
+    "/web-template-rsbuild/static/js/index.eba552ce.js",
     "/web-template-rsbuild/static/js/774.5d38e7e3.js.LICENSE.txt",
     "/web-template-rsbuild/favicon.ico",
     "/web-template-rsbuild/static/image/192x192.e94557c2.png",
@@ -28,13 +28,13 @@
       ],
       "initial": {
         "js": [
-          "/web-template-rsbuild/static/js/index.b8131c50.js",
+          "/web-template-rsbuild/static/js/index.eba552ce.js",
           "/web-template-rsbuild/static/js/774.5d38e7e3.js",
           "/web-template-rsbuild/static/js/lib-router.7c7e84bc.js",
           "/web-template-rsbuild/static/js/lib-react.53cae98c.js"
         ],
         "css": [
-          "/web-template-rsbuild/static/css/index.d4a2f7cc.css"
+          "/web-template-rsbuild/static/css/index.e6bdfb26.css"
         ]
       },
       "async": {
