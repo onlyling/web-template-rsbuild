@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install
-      - name: Build document
+      - name: Run build
         run: |
           pnpm run build:gh-pages
       - name: Deploy with gh-pages
