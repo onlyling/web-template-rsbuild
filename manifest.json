@@ -3,12 +3,12 @@
     "/web-template-rsbuild/static/js/async/13.30c245f2.js",
     "/web-template-rsbuild/static/js/lib-react.087990fc.js",
     "/web-template-rsbuild/static/js/lib-router.d79e3476.js",
-    "/web-template-rsbuild/static/js/265.b3dad52d.js",
+    "/web-template-rsbuild/static/js/545.ce347d68.js",
     "/web-template-rsbuild/static/css/index.8daa652d.css",
-    "/web-template-rsbuild/static/js/index.d8b85cfa.js",
+    "/web-template-rsbuild/static/js/index.78f8146b.js",
     "/web-template-rsbuild/static/js/async/916.c2a79f02.js",
     "/web-template-rsbuild/static/js/async/608.8086e361.js",
-    "/web-template-rsbuild/static/js/265.b3dad52d.js.LICENSE.txt",
+    "/web-template-rsbuild/static/js/545.ce347d68.js.LICENSE.txt",
     "/web-template-rsbuild/favicon.ico",
     "/web-template-rsbuild/static/image/192x192.e94557c2.png",
     "/web-template-rsbuild/index.html",
@@ -19,7 +19,7 @@
     "index": {
       "assets": [
         "static/image/192x192.e94557c2.png",
-        "/web-template-rsbuild/static/js/265.b3dad52d.js.LICENSE.txt",
+        "/web-template-rsbuild/static/js/545.ce347d68.js.LICENSE.txt",
         "/web-template-rsbuild/static/js/lib-router.d79e3476.js.LICENSE.txt",
         "/web-template-rsbuild/static/js/lib-react.087990fc.js.LICENSE.txt"
       ],
@@ -28,8 +28,8 @@
       ],
       "initial": {
         "js": [
-          "/web-template-rsbuild/static/js/index.d8b85cfa.js",
-          "/web-template-rsbuild/static/js/265.b3dad52d.js",
+          "/web-template-rsbuild/static/js/index.78f8146b.js",
+          "/web-template-rsbuild/static/js/545.ce347d68.js",
           "/web-template-rsbuild/static/js/lib-router.d79e3476.js",
           "/web-template-rsbuild/static/js/lib-react.087990fc.js"
         ],
