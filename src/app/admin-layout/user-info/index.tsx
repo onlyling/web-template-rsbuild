@@ -3,7 +3,7 @@ import {
   UpOutlined,
   UserOutlined,
 } from '@ant-design/icons'
-import { Dropdown, Modal } from 'antd'
+import { Dropdown, App } from 'antd'
 import { memo } from 'react'
 
 import useLogout from '@/app/useLogout'
@@ -14,6 +14,8 @@ import './style.less'
 const AdminLayoutUserInfo = () => {
   const { user } = useUser()
   const logout = useLogout()
+  const app = App.useApp()
+
   return (
     <Dropdown
       menu={{
@@ -30,7 +32,7 @@ const AdminLayoutUserInfo = () => {
         onClick: ({ key }) => {
           switch (key) {
             case 'logout':
-              Modal.confirm({
+              app.modal.confirm({
                 title: '确定要退出登录吗？',
                 icon: <ExclamationCircleOutlined />,
                 maskClosable: false,
