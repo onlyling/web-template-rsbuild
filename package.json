@@ -12,7 +12,7 @@
     "build:gh-pages": "cross-env BUILD_ENV=gh-pages rsbuild build",
     "lint:ts": "tsc --noEmit && eslint src --ext .ts,.tsx",
     "lint:style": "stylelint 'src/**/*.less'",
-    "ncu": "npx npm-check-updates -u -x react-router-dom,typescript,react,react-dom",
+    "ncu": "npx npm-check-updates -u -x react-router-dom,typescript,react,react-dom,@types/react,@types/react-dom",
     "commit": "npx git-cz",
     "prepare": "husky",
     "commitlint": "commitlint --edit",
@@ -23,14 +23,14 @@
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
     "ahooks": "^3.8.4",
-    "antd": "^5.22.7",
+    "antd": "^5.23.1",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "6.3.0",
-    "zustand": "^5.0.2"
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
@@ -43,8 +43,8 @@
     "@rsbuild/plugin-react": "1.1.0",
     "@types/lodash": "^4.17.14",
     "@types/node": "^22.10.5",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "@types/webpack-env": "^1.18.5",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
