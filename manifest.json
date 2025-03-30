@@ -1,15 +1,15 @@
 {
   "allFiles": [
-    "/web-template-rsbuild/static/js/async/916.2815202c.js",
-    "/web-template-rsbuild/static/js/async/608.8b549206.js",
-    "/web-template-rsbuild/static/js/async/13.39a17825.js",
-    "/web-template-rsbuild/static/js/lib-react.aa265128.js",
-    "/web-template-rsbuild/static/js/lib-router.c8e1ce3b.js",
-    "/web-template-rsbuild/static/js/181.a9edfd72.js",
+    "/web-template-rsbuild/static/js/async/346.abba789d.js",
+    "/web-template-rsbuild/static/js/async/694.d8522de5.js",
+    "/web-template-rsbuild/static/js/async/429.f332b3a3.js",
+    "/web-template-rsbuild/static/js/lib-react.08f469d3.js",
+    "/web-template-rsbuild/static/js/lib-router.8e922f1f.js",
+    "/web-template-rsbuild/static/js/204.5a340217.js",
     "/web-template-rsbuild/static/css/index.febf88f2.css",
-    "/web-template-rsbuild/static/js/index.8484bd22.js",
-    "/web-template-rsbuild/static/image/192x192.e94557c2.png",
+    "/web-template-rsbuild/static/js/index.428c8a0a.js",
     "/web-template-rsbuild/favicon.ico",
+    "/web-template-rsbuild/static/image/192x192.e94557c2.png",
     "/web-template-rsbuild/index.html"
   ],
   "entries": {
@@ -22,10 +22,10 @@
       ],
       "initial": {
         "js": [
-          "/web-template-rsbuild/static/js/index.8484bd22.js",
-          "/web-template-rsbuild/static/js/181.a9edfd72.js",
-          "/web-template-rsbuild/static/js/lib-router.c8e1ce3b.js",
-          "/web-template-rsbuild/static/js/lib-react.aa265128.js"
+          "/web-template-rsbuild/static/js/index.428c8a0a.js",
+          "/web-template-rsbuild/static/js/204.5a340217.js",
+          "/web-template-rsbuild/static/js/lib-router.8e922f1f.js",
+          "/web-template-rsbuild/static/js/lib-react.08f469d3.js"
         ],
         "css": [
           "/web-template-rsbuild/static/css/index.febf88f2.css"
@@ -33,9 +33,9 @@
       },
       "async": {
         "js": [
-          "/web-template-rsbuild/static/js/async/13.39a17825.js",
-          "/web-template-rsbuild/static/js/async/608.8b549206.js",
-          "/web-template-rsbuild/static/js/async/916.2815202c.js"
+          "/web-template-rsbuild/static/js/async/429.f332b3a3.js",
+          "/web-template-rsbuild/static/js/async/694.d8522de5.js",
+          "/web-template-rsbuild/static/js/async/346.abba789d.js"
         ]
       }
     }
